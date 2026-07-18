@@ -113,6 +113,17 @@
   }
   .lettre p{margin-bottom:16px;color:#41544D}
   .lettre .signature{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--pin);margin-top:24px;margin-bottom:0}
+  .lettre-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;align-items:center;max-width:1080px}
+  .lettre-grid .lettre{margin:0;max-width:none}
+  .portrait{margin:0;text-align:center}
+  .portrait img{
+    width:100%;max-width:340px;margin:0 auto;
+    border-radius:56% 44% 52% 48% / 46% 52% 48% 54%;
+    aspect-ratio:1/1.12;object-fit:cover;
+    border:8px solid var(--blanc);
+    box-shadow:0 10px 34px rgba(46,70,63,.14);
+  }
+  .portrait figcaption{margin-top:14px;font-size:.88rem;color:var(--encre-douce);font-weight:500}
 
   /* ---------- Méthodes : planning visuel ---------- */
   .methodes{background:var(--sauge-pale)}
@@ -214,7 +225,8 @@
     .grille-methodes{grid-template-columns:repeat(2,1fr)}
     .etapes{grid-template-columns:repeat(2,1fr);gap:32px}
     .etapes::before{display:none}
-    .deux-col,.tarifs-carte,.contact-grid{grid-template-columns:1fr}
+    .deux-col,.tarifs-carte,.contact-grid,.lettre-grid{grid-template-columns:1fr}
+    .portrait{order:-1}
     .nav-links li:not(:last-child){display:none}
     .bf-1{left:0}.bf-2{right:0}
   }
@@ -276,7 +288,7 @@
 
 <!-- LETTRE -->
 <section>
-  <div class="wrap">
+  <div class="wrap lettre-grid">
     <div class="lettre reveal">
       <p><strong>Chers parents,</strong></p>
       <p>Je travaille auprès d'enfants porteurs de handicaps, et principalement de troubles du neuro-développement : spectre de l'autisme, développement intellectuel, troubles du langage, de la coordination, de l'attention ou des apprentissages.</p>
@@ -284,6 +296,10 @@
       <p>Je vous propose de construire ensemble le projet individuel de votre enfant, avec un soutien et une guidance parentale à chaque étape. N'hésitez pas à me joindre pour toute question.</p>
       <p class="signature">À très bientôt, Isabelle</p>
     </div>
+    <figure class="portrait reveal">
+      <img src="images/isabelle.jpg" alt="Isabelle Voiry, éducatrice de jeunes enfants E.J.E">
+      <figcaption>Isabelle — Éducatrice E.J.E, Diplôme d'État</figcaption>
+    </figure>
   </div>
 </section>
 
