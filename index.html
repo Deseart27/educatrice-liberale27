@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isabelle Voiry — Éducatrice E.J.E libérale · Vernon, Gaillon, Pacy-sur-Eure (27)</title>
+<meta name="description" content="Éducatrice E.J.E pour enfants TSA et troubles du neuro-développement sur Vernon, Gaillon, Pacy-sur-Eure (27). Guidance parentale, projet individuel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pin:#2E463F;         /* vert sapin profond — texte */
+    --sauge:#7FA48E;       /* sauge — accents doux */
+    --sauge-pale:#E4EDE6;  /* fond de sections */
+    --papier:#F8F6F1;      /* fond principal */
+    --soleil:#EFC368;      /* jaune beurre — accent chaleureux */
+    --blanc:#FFFFFF;
+    --encre-douce:#5C6F68; /* texte secondaire */
+    --radius:22px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Figtree',sans-serif;
+    background:var(--papier);
+    color:var(--pin);
+    line-height:1.65;
+    font-size:17px;
+  }
+  h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(248,246,241,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #E8E4DA;
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1080px;margin:0 auto}
+  .logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.05rem;text-decoration:none}
+  .logo span{color:var(--sauge)}
+  .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+  .nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--encre-douce);transition:color .2s}
+  .nav-links a:hover{color:var(--pin)}
+  .btn{
+    display:inline-block;background:var(--pin);color:#fff;
+    padding:12px 24px;border-radius:999px;text-decoration:none;
+    font-weight:600;font-size:.95rem;transition:transform .2s, background .2s;
+  }
+  .btn:hover{background:#243a34;transform:translateY(-1px)}
+  .btn.solaire{background:var(--soleil);color:var(--pin)}
+  .btn.solaire:hover{background:#e8b74f}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:72px 0 64px}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--sauge-pale);color:var(--pin);
+    padding:7px 16px;border-radius:999px;font-size:.85rem;font-weight:600;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sauge)}
+  .hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);font-weight:700;margin-bottom:20px;letter-spacing:-.01em}
+  .hero h1 em{font-style:normal;color:var(--sauge);position:relative}
+  .hero p.lead{font-size:1.12rem;color:var(--encre-douce);max-width:32rem;margin-bottom:30px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .tel-inline{font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--pin)}
+  .tel-inline small{display:block;font-weight:500;font-size:.8rem;color:var(--encre-douce)}
+
+  .hero-visuel{position:relative}
+  .blob{
+    aspect-ratio:1/1.08;width:100%;
+    background:linear-gradient(150deg,var(--sauge) 0%,#9DBCA8 100%);
+    border-radius:58% 42% 55% 45% / 48% 55% 45% 52%;
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;
+  }
+  .blob-inner{color:#fff;text-align:center;padding:32px;font-family:'Bricolage Grotesque',sans-serif}
+  .blob-inner strong{display:block;font-size:2.6rem;line-height:1}
+  .blob-inner span{font-size:.95rem;opacity:.92}
+  .badge-flottant{
+    position:absolute;background:var(--blanc);border-radius:16px;
+    padding:12px 18px;box-shadow:0 8px 28px rgba(46,70,63,.14);
+    font-size:.85rem;font-weight:600;
+  }
+  .badge-flottant small{display:block;font-weight:500;color:var(--encre-douce);font-size:.75rem}
+  .bf-1{top:8%;left:-6%}
+  .bf-2{bottom:10%;right:-4%}
+
+  /* ---------- Bandeau conventions ---------- */
+  .conventions{background:var(--blanc);border-block:1px solid #EBE7DD;padding:22px 0}
+  .conventions .wrap{display:flex;gap:12px 36px;flex-wrap:wrap;justify-content:center;align-items:center;color:var(--encre-douce);font-size:.92rem}
+  .conventions strong{color:var(--pin)}
+
+  /* ---------- Sections ---------- */
+  section{padding:76px 0}
+  .titre-section{max-width:620px;margin-bottom:44px}
+  .titre-section h2{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:12px}
+  .titre-section p{color:var(--encre-douce)}
+  .sur-titre{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sauge);display:block;margin-bottom:10px}
+
+  /* ---------- Lettre aux parents ---------- */
+  .lettre{background:var(--blanc);border-radius:var(--radius);padding:44px 48px;box-shadow:0 4px 24px rgba(46,70,63,.06);max-width:760px;margin:0 auto;position:relative}
+  .lettre::before{
+    content:"“";font-family:'Bricolage Grotesque',sans-serif;
+    position:absolute;top:-8px;left:28px;font-size:5rem;color:var(--soleil);line-height:1;
+  }
+  .lettre p{margin-bottom:16px;color:#41544D}
+  .lettre .signature{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--pin);margin-top:24px;margin-bottom:0}
+
+  /* ---------- Méthodes : planning visuel ---------- */
+  .methodes{background:var(--sauge-pale)}
+  .grille-methodes{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .carte-methode{
+    background:var(--blanc);border-radius:var(--radius);padding:28px 24px;
+    display:flex;flex-direction:column;gap:12px;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .carte-methode:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(46,70,63,.10)}
+  .picto{
+    width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    font-size:1.5rem;background:var(--sauge-pale);
+  }
+  .carte-methode h3{font-size:1.05rem}
+  .carte-methode .sigle{font-size:.78rem;font-weight:700;color:var(--sauge);letter-spacing:.08em}
+  .carte-methode p{font-size:.92rem;color:var(--encre-douce)}
+  .note-has{
+    margin-top:26px;text-align:center;font-size:.92rem;color:var(--encre-douce);
+  }
+  .note-has strong{color:var(--pin)}
+
+  /* ---------- Parcours (signature) ---------- */
+  .parcours{position:relative}
+  .etapes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+  .etapes::before{
+    content:"";position:absolute;top:26px;left:12%;right:12%;
+    border-top:3px dotted var(--sauge);z-index:0;
+  }
+  .etape{position:relative;z-index:1;text-align:center;padding:0 8px}
+  .rond{
+    width:54px;height:54px;border-radius:50%;background:var(--soleil);
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.2rem;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+    border:5px solid var(--papier);
+  }
+  .etape h3{font-size:1rem;margin-bottom:8px}
+  .etape p{font-size:.9rem;color:var(--encre-douce)}
+
+  /* ---------- Objectifs & valeurs ---------- */
+  .deux-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .carte-large{background:var(--blanc);border-radius:var(--radius);padding:36px;box-shadow:0 4px 24px rgba(46,70,63,.05)}
+  .carte-large.verte{background:var(--pin);color:#EDF3EF}
+  .carte-large.verte h3{color:#fff}
+  .carte-large h3{font-size:1.3rem;margin-bottom:14px}
+  .liste-douce{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .liste-douce li{padding-left:26px;position:relative;font-size:.96rem}
+  .liste-douce li::before{content:"✿";position:absolute;left:0;color:var(--sauge)}
+  .carte-large.verte .liste-douce li::before{color:var(--soleil)}
+  .secret{margin-top:18px;font-size:.88rem;opacity:.85;font-style:italic}
+
+  /* ---------- Tarifs ---------- */
+  .tarifs-carte{
+    background:var(--blanc);border-radius:var(--radius);
+    display:grid;grid-template-columns:1fr 1fr;overflow:hidden;
+    box-shadow:0 4px 24px rgba(46,70,63,.06);
+  }
+  .tarifs-gauche{padding:44px}
+  .prix{font-family:'Bricolage Grotesque',sans-serif;font-size:3rem;font-weight:700;line-height:1}
+  .prix small{font-size:1rem;font-weight:500;color:var(--encre-douce)}
+  .tarifs-droite{background:var(--sauge-pale);padding:44px}
+  .ligne-tarif{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #D6E2D9;font-size:.95rem}
+  .ligne-tarif:last-child{border-bottom:none}
+  .ligne-tarif span:last-child{font-weight:600;white-space:nowrap}
+  .mdph{
+    margin-top:22px;background:var(--soleil);border-radius:14px;padding:16px 18px;
+    font-size:.9rem;font-weight:500;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--pin);color:#EDF3EF;border-radius:var(--radius) var(--radius) 0 0}
+  .contact .titre-section h2{color:#fff}
+  .contact .titre-section p{color:#BFD0C6}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+  .contact-item{margin-bottom:22px}
+  .contact-item small{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#9DB5A8;margin-bottom:4px;font-weight:600}
+  .contact-item a{font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem;font-weight:600;color:#fff;text-decoration:none}
+  .contact-item a:hover{color:var(--soleil)}
+  .zone{background:rgba(255,255,255,.07);border-radius:var(--radius);padding:32px}
+  .zone h3{color:#fff;margin-bottom:12px;font-size:1.1rem}
+  .zone p{font-size:.95rem;color:#CBD9D0}
+  .villes{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .ville{background:rgba(255,255,255,.12);padding:7px 16px;border-radius:999px;font-size:.88rem;font-weight:500}
+
+  footer{background:var(--pin);color:#8FA79A;padding:26px 0;font-size:.85rem;border-top:1px solid rgba(255,255,255,.1)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* ---------- Reveal doux ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.visible{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .grille-methodes{grid-template-columns:repeat(2,1fr)}
+    .etapes{grid-template-columns:repeat(2,1fr);gap:32px}
+    .etapes::before{display:none}
+    .deux-col,.tarifs-carte,.contact-grid{grid-template-columns:1fr}
+    .nav-links li:not(:last-child){display:none}
+    .bf-1{left:0}.bf-2{right:0}
+  }
+  @media (max-width:560px){
+    .grille-methodes{grid-template-columns:1fr}
+    .lettre{padding:36px 26px}
+    section{padding:56px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#">Isabelle Voiry <span>· Éducatrice E.J.E</span></a>
+    <ul class="nav-links">
+      <li><a href="#methodes">Mes approches</a></li>
+      <li><a href="#parcours">Comment ça se passe</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a class="btn" href="#contact">Me contacter</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Secteur de Vernon, Gaillon & Pacy-sur-Eure (27)</span>
+      <h1>Accompagner votre enfant, <em>à son rythme</em>, dans son quotidien.</h1>
+      <p class="lead">Éducatrice de jeunes enfants (E.J.E, Diplôme d'État), je propose un projet individuel d'accompagnement socio-éducatif pour les enfants porteurs de troubles du neuro-développement — à domicile, à l'école ou en crèche.</p>
+      <div class="hero-cta">
+        <a class="btn solaire" href="#contact">Prendre contact</a>
+        <a class="tel-inline" href="tel:+33675400954">06 75 40 09 54<small>Réponse rapide, échange sans engagement</small></a>
+      </div>
+    </div>
+    <div class="hero-visuel">
+      <div class="blob">
+        <div class="blob-inner">
+          <strong>TSA · TND</strong>
+          <span>Autisme, langage, attention,<br>coordination, apprentissages</span>
+        </div>
+      </div>
+      <div class="badge-flottant bf-1">Diplôme d'État E.J.E<small>grade licence</small></div>
+      <div class="badge-flottant bf-2">Formation TSA<small>Université Clermont Auvergne</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVENTIONS -->
+<div class="conventions">
+  <div class="wrap">
+    <span>Conventionnée avec le <strong>PCPE — Centre Ressource Autisme de Rouvray</strong></span>
+    <span>et le <strong>PCPE Polyhandicap d'Yvetot</strong> (Relais Handicap Rare)</span>
+  </div>
+</div>
+
+<!-- LETTRE -->
+<section>
+  <div class="wrap">
+    <div class="lettre reveal">
+      <p><strong>Chers parents,</strong></p>
+      <p>Je travaille auprès d'enfants porteurs de handicaps, et principalement de troubles du neuro-développement : spectre de l'autisme, développement intellectuel, troubles du langage, de la coordination, de l'attention ou des apprentissages.</p>
+      <p>J'ai validé une formation complémentaire spécifique à l'analyse, la prise en charge et la gestion du comportement des enfants TSA (Université Clermont Auvergne).</p>
+      <p>Je vous propose de construire ensemble le projet individuel de votre enfant, avec un soutien et une guidance parentale à chaque étape. N'hésitez pas à me joindre pour toute question.</p>
+      <p class="signature">À très bientôt, Isabelle</p>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTHODES -->
+<section class="methodes" id="methodes">
+  <div class="wrap">
+    <div class="titre-section reveal">
+      <span class="sur-titre">Mes approches éducatives</span>
+      <h2>Des méthodes reconnues, choisies selon votre enfant</h2>
+      <p>Chaque enfant est différent : je m'appuie sur plusieurs approches complémentaires, en fonction de ses besoins et de son projet.</p>
+    </div>
+    <div class="grille-methodes">
+      <div class="carte-methode reveal">
+        <div class="picto">🧩</div>
+        <span class="sigle">ABA</span>
+        <h3>Analyse appliquée du comportement</h3>
+        <p>Renforcement des comportements positifs grâce à diverses procédures : guidance, chaînage, incitation…</p>
+      </div>
+      <div class="carte-methode reveal">
+        <div class="picto">🖼️</div>
+        <span class="sigle">PECS</span>
+        <h3>Communication alternative</h3>
+        <p>Utilisation d'images ou de photos afin d'initier et de développer la communication.</p>
+      </div>
+      <div class="carte-methode reveal">
+        <div class="picto">🌱</div>
+        <span class="sigle">ESDM</span>
+        <h3>Méthode de Denver</h3>
+        <p>Approche développementale et éducative visant la communication verbale et non verbale : imitation, partage, attention…</p>
+      </div>
+      <div class="carte-methode reveal">
+        <div class="picto">🗂️</div>
+        <span class="sigle">TEACCH</span>
+        <h3>Éducation structurée</h3>
+        <p>Méthode fondée sur une structuration simplifiée et répétitive des tâches, rassurante pour l'enfant.</p>
+      </div>
+    </div>
+    <p class="note-has reveal">Toutes ces méthodes sont <strong>validées et recommandées par la Haute Autorité de Santé</strong>.</p>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section class="parcours" id="parcours">
+  <div class="wrap">
+    <div class="titre-section reveal">
+      <span class="sur-titre">Concrètement</span>
+      <h2>Un accompagnement pas à pas</h2>
+    </div>
+    <div class="etapes">
+      <div class="etape reveal">
+        <div class="rond">1</div>
+        <h3>Rencontre en famille</h3>
+        <p>Un temps d'échange pour identifier et analyser les besoins de votre enfant.</p>
+      </div>
+      <div class="etape reveal">
+        <div class="rond">2</div>
+        <h3>Projet individuel</h3>
+        <p>J'élabore un projet et un devis, que vous pouvez soumettre à la MDPH pour un complément d'allocation.</p>
+      </div>
+      <div class="etape reveal">
+        <div class="rond">3</div>
+        <h3>Séances sur son lieu de vie</h3>
+        <p>Les prestations se déroulent à domicile, à l'école, en crèche ou en garderie.</p>
+      </div>
+      <div class="etape reveal">
+        <div class="rond">4</div>
+        <h3>Bilan & suivi</h3>
+        <p>Bilan fonctionnel sur demande (initial et à 6 mois), en lien avec les professionnels du médico-social.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIFS & VALEURS -->
+<section>
+  <div class="wrap deux-col">
+    <div class="carte-large reveal">
+      <h3>Mes objectifs</h3>
+      <ul class="liste-douce">
+        <li>Établir une relation de confiance par le jeu, le plaisir, l'imitation et l'attention conjointe.</li>
+        <li>Favoriser l'éveil, la sociabilisation, les apprentissages et les habiletés sociales.</li>
+        <li>Accompagner la gestion des comportements défis, la motivation et la structuration dans le temps.</li>
+        <li>Développer la communication et le langage, dans le respect du bien-être de l'enfant.</li>
+      </ul>
+    </div>
+    <div class="carte-large verte reveal">
+      <h3>Mes valeurs</h3>
+      <ul class="liste-douce">
+        <li>La bienveillance, l'écoute et la compréhension.</li>
+        <li>L'équité, la dignité et le respect de l'enfant.</li>
+        <li>Le respect de l'avis des parents, de l'intimité, du choix de vie et de la religion.</li>
+      </ul>
+      <p class="secret">Je suis soumise au secret professionnel.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs">
+  <div class="wrap">
+    <div class="titre-section reveal">
+      <span class="sur-titre">Informations & tarifs</span>
+      <h2>Des tarifs simples et transparents</h2>
+    </div>
+    <div class="tarifs-carte reveal">
+      <div class="tarifs-gauche">
+        <p class="prix">45 €<small> / heure</small></p>
+        <p style="color:var(--encre-douce);margin-top:14px">Facture mensuelle, non soumise à la TVA, payable au comptant.</p>
+        <p style="margin-top:18px;font-size:.85rem;color:var(--encre-douce)">N° SIRET 947 972 923 00017</p>
+      </div>
+      <div class="tarifs-droite">
+        <div class="ligne-tarif"><span>Frais de déplacement</span><span>0,65 € / km</span></div>
+        <div class="ligne-tarif"><span>Bilan initial et final</span><span>Sur demande</span></div>
+        <div class="mdph">💡 Le devis peut être soumis à la MDPH pour obtenir un complément d'allocation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="titre-section reveal">
+      <span class="sur-titre" style="color:var(--soleil)">Contact</span>
+      <h2>Parlons du projet de votre enfant</h2>
+      <p>Un premier échange, sans engagement, pour répondre à toutes vos questions.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-item">
+          <small>Téléphone</small>
+          <a href="tel:+33675400954">06 75 40 09 54</a>
+        </div>
+        <div class="contact-item">
+          <small>E-mail</small>
+          <a href="mailto:isabelle.voiry@orange.fr">isabelle.voiry@orange.fr</a>
+        </div>
+      </div>
+      <div class="zone reveal">
+        <h3>Zone d'intervention</h3>
+        <p>Je me déplace au domicile de l'enfant ou sur son lieu de vie dans l'Eure (27) :</p>
+        <div class="villes">
+          <span class="ville">Vernon</span>
+          <span class="ville">Gaillon</span>
+          <span class="ville">Pacy-sur-Eure</span>
+          <span class="ville">et environs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Isabelle Voiry — Éducatrice E.J.E libérale</span>
+    <span>Secteur de Vernon, Pacy-sur-Eure, Gaillon (27)</span>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>

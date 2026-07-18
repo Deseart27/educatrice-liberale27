@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://educatrice-liberale-vernon27.fr/sitemap.xml
